@@ -1,0 +1,47 @@
+{
+  "basic": {
+    "gkdiving": 1,
+    "gkhandling": 1,
+    "gkkicking": 1,
+    "gkreflexes": 1,
+    "acceleration": 1,
+    "sprintspeed": 0,
+    "gkpositioning": 1
+  },
+  "wall": {
+    "gkdiving": 3,
+    "gkhandling": 1,
+    "gkkicking": 2,
+    "gkreflexes": 0,
+    "acceleration": 0,
+    "sprintspeed": 0,
+    "gkpositioning": 0
+  },
+  "glove": {
+    "gkdiving": 2,
+    "gkhandling": 3,
+    "gkkicking": 0,
+    "gkreflexes": 0,
+    "acceleration": 0,
+    "sprintspeed": 0,
+    "gkpositioning": 1
+  },
+  "shield": {
+    "gkdiving": 0,
+    "gkhandling": 0,
+    "gkkicking": 2,
+    "gkreflexes": 3,
+    "acceleration": 0,
+    "sprintspeed": 1,
+    "gkpositioning": 0
+  },
+  "cat": {
+    "gkdiving": 0,
+    "gkhandling": 0,
+    "gkkicking": 0,
+    "gkreflexes": 2,
+    "acceleration": 1,
+    "sprintspeed": 0,
+    "gkpositioning": 3
+  }
+}

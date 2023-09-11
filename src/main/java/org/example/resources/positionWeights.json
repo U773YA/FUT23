@@ -1,0 +1,212 @@
+{
+  "GK": {
+    "attributes": {
+      "gkdiving": 0.4,
+      "gkreflexes": 0.3,
+      "gkhandling": 0.2,
+      "gkpositioning": 0.1
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0,
+      "defensive": 0
+    }
+  },
+  "CB": {
+    "attributes": {
+      "defending": 0.4,
+      "headingaccuracy": 0.3,
+      "strength": 0.2,
+      "jumping": 0.1
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0,
+      "defensive": 0.4
+    }
+  },
+  "LB": {
+    "attributes": {
+      "pace": 0.3,
+      "defending": 0.3,
+      "crossing": 0.2,
+      "stamina": 0.2
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0.2,
+      "defensive": 0.3
+    }
+  },
+  "RB": {
+    "attributes": {
+      "pace": 0.3,
+      "defending": 0.3,
+      "crossing": 0.2,
+      "stamina": 0.2
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0.3,
+      "defensive": 0.2
+    }
+  },
+  "CDM": {
+    "attributes": {
+      "defending": 0.3,
+      "passing": 0.3,
+      "heading": 0.2,
+      "stamina": 0.2
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0.2,
+      "defensive": 0.3
+    }
+  },
+  "CM": {
+    "attributes": {
+      "passing": 0.3,
+      "dribbling": 0.3,
+      "shooting": 0.2,
+      "stamina": 0.2
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0.3,
+      "defensive": 0.2
+    }
+  },
+  "LWB": {
+    "attributes": {
+      "pace": 0.3,
+      "defending": 0.3,
+      "crossing": 0.2,
+      "stamina": 0.2
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0.3,
+      "defensive": 0.2
+    }
+  },
+  "RWB": {
+    "attributes": {
+      "pace": 0.3,
+      "defending": 0.3,
+      "crossing": 0.2,
+      "stamina": 0.2
+    },
+    "skillMoves": 0,
+    "weakFoot": 0,
+    "workRates": {
+      "attacking": 0.3,
+      "defensive": 0.2
+    }
+  },
+  "LM": {
+    "attributes": {
+      "pace": 0.3,
+      "dribbling": 0.3,
+      "shooting": 0.2,
+      "passing": 0.2
+    },
+    "skillMoves": 0.4,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.4,
+      "defensive": 0.1
+    }
+  },
+  "RM": {
+    "attributes": {
+      "pace": 0.3,
+      "dribbling": 0.3,
+      "shooting": 0.2,
+      "passing": 0.2
+    },
+    "skillMoves": 0.4,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.4,
+      "defensive": 0.1
+    }
+  },
+  "LW": {
+    "attributes": {
+      "pace": 0.3,
+      "dribbling": 0.3,
+      "shooting": 0.3,
+      "weakFoot": 0.1
+    },
+    "skillMoves": 0.5,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.5,
+      "defensive": 0
+    }
+  },
+  "RW": {
+    "attributes": {
+      "pace": 0.3,
+      "dribbling": 0.3,
+      "shooting": 0.3,
+      "weakFoot": 0.1
+    },
+    "skillMoves": 0.5,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.5,
+      "defensive": 0
+    }
+  },
+  "CAM": {
+    "attributes": {
+      "shooting": 0.3,
+      "passing": 0.3,
+      "dribbling": 0.3,
+      "stamina": 0.1
+    },
+    "skillMoves": 0.4,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.4,
+      "defensive": 0.1
+    }
+  },
+  "ST": {
+    "attributes": {
+      "pace": 0.3,
+      "shooting": 0.4,
+      "dribbling": 0.2,
+      "heading": 0.1
+    },
+    "skillMoves": 0.4,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.5,
+      "defensive": 0
+    }
+  },
+  "CF": {
+    "attributes": {
+      "pace": 0.3,
+      "shooting": 0.3,
+      "passing": 0.2,
+      "dribbling": 0.2
+    },
+    "skillMoves": 0.4,
+    "weakFoot": 0.3,
+    "workRates": {
+      "attacking": 0.5,
+      "defensive": 0
+    }
+  }
+}

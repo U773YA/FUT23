@@ -425,6 +425,7 @@ public class Variation extends InputData {
             double iconHeroScore = playerCard.getClubId() == 112658 ? 100 : playerCard.getClubId() == 114605 ? 95 : 90;
             double score = playerCard.getRating() + attributesScore.get();
             return  (((score)) + accelerateScore + (playerCard.getHeight() / 18.2) + bodyTypeScore + iconHeroScore) / 10.0;
+//            return (playerCard.getRating() + ((double) playerCard.getLikes() / (playerCard.getLikes() + playerCard.getDislikes())) * 100.00) / 2.0;
         } else {
             double positionRating = ChemistryCalculator.getPlayerRatingPerPosition(attributes, position);
             double accelerateScore = 0.0;
@@ -449,6 +450,7 @@ public class Variation extends InputData {
                     + ((attributes.get("shortpassing") + attributes.get("longpassing")) / 2.0)
                     + bodyTypeScore + iconHeroScore
             ) / 16.0;
+//            return (positionRating + ((double) playerCard.getLikes() / (playerCard.getLikes() + playerCard.getDislikes())) * 100.00) / 2.0;
         }
     }
 

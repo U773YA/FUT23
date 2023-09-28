@@ -24,12 +24,18 @@ public class PlayerCard {
     private Integer leagueId;
     private Integer rating;
     private Integer height;
+    private Integer weight;
     private Map<String, AttributeValues> baseAttributes;
     public List<Double> chemScores = new ArrayList<>();
     public String chemistry;
     public String bodyType;
     public Map<String, List<String>> accelerateMap = new HashMap<>();
     private List<Position> altPositions = new ArrayList<>();
+    private long likes;
+    private long dislikes;
+    private Position primaryPosition;
+    private String cardName;
+    private String acceleRATE;
 
     public CardInput getCardInput() {
         return cardInput;
@@ -159,11 +165,59 @@ public class PlayerCard {
         this.height = height;
     }
 
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
     public String getBodyType() {
         return bodyType;
     }
 
     public void setBodyType(String bodyType) {
         this.bodyType = bodyType;
+    }
+
+    public long getLikes() {
+        return likes;
+    }
+
+    public void setLikes(long likes) {
+        this.likes = likes;
+    }
+
+    public long getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(long dislikes) {
+        this.dislikes = dislikes;
+    }
+
+    public Position getPrimaryPosition() {
+        return primaryPosition;
+    }
+
+    public void setPrimaryPosition(Position primaryPosition) {
+        this.primaryPosition = primaryPosition;
+    }
+
+    public String getCardName() {
+        return cardName;
+    }
+
+    public void setCardName(String cardName) {
+        this.cardName = cardName;
+    }
+
+    public String getAcceleRATE() {
+        return acceleRATE;
+    }
+
+    public void setAcceleRATE(String acceleRATE) {
+        this.acceleRATE = acceleRATE;
     }
 }

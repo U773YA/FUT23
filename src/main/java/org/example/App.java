@@ -1,7 +1,5 @@
 package org.example;
 
-import java.io.IOException;
-
 /**
  * Hello world!
  *

@@ -32,7 +32,7 @@ public class Scraper {
 
     public PlayerCard getCardData(long cardId, Position playerInputPosition) throws IOException {
         PlayerCard playerCard = new PlayerCard();
-        String cardUrl = "https://www.futbin.com/23/player/" + cardId;
+        String cardUrl = "https://www.futbin.com/24/player/" + cardId;
         Connection connection = Jsoup.connect(cardUrl);
         connection.userAgent("Mozilla/5.0 (Windows NT 10.0;Win64) AppleWebkit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36");
         Document doc = connection.get();
@@ -60,22 +60,24 @@ public class Scraper {
         divElement = doc.selectFirst("div.pcdisplay-rat");
         playerCard.setRating(Integer.parseInt(divElement.text().trim()));
 
-        Element thElement = infoContentTable.select("th:contains(Alt POS)").first();
+        Element thElement = doc.select("div.pcdisplay-alt-pos").first();
         if (thElement != null) {
             assert thElement.parent() != null;
-            Element tdElement = thElement.parent().select("td").first();
-            if (tdElement != null) {
-                String tdText = tdElement.text();
-                String[] positionsArray = tdText.split(", ");
+//            Element tdElement = thElement.parent().select("td").first();
+//            if (tdElement != null) {
+                String tdText = thElement.text();
+                String[] positionsArray = tdText.split(" ");
                 List<Position> positionsList = new ArrayList<>();
                 for (String position : positionsArray) {
                     try {
-                        positionsList.add(mapPosition(position));
+                        if (!position.isEmpty() && !position.isBlank()) {
+                            positionsList.add(mapPosition(position));
+                        }
                     } catch (Exception ex) {
                         LOG.error("Unknown position found " + position + " for card id " + cardId);
                     }
                 }
-                if (currPosition != playerInputPosition) {
+                if (playerInputPosition != null && currPosition != playerInputPosition) {
                     int index = positionsList.indexOf(playerInputPosition);
                     if (index != -1) {
                         positionsList.set(index, currPosition);
@@ -83,8 +85,9 @@ public class Scraper {
                 }
                 playerCard.setAltPositions(positionsList);
             }
-        }
+//        }
 
+        playerCard.setCardName(extractAttribute("Name"));
         playerCard.setNation(extractAttribute("Nation"));
         playerCard.setSkills(Integer.parseInt(extractAttribute("Skills")));
         playerCard.setWeakFoot(Integer.parseInt(extractAttribute("Weak Foot")));
@@ -94,6 +97,8 @@ public class Scraper {
         playerCard.setClubId(Integer.valueOf(extractAttribute("Club ID")));
         playerCard.setLeagueId(Integer.valueOf(extractAttribute("League ID")));
         playerCard.setBodyType(extractAttribute("B.Type"));
+        playerCard.setAcceleRATE(extractAttribute("AcceleRATE"));
+        playerCard.setWeight(Integer.parseInt(extractAttribute("Weight")));
         String height = extractAttribute("Height");
         Pattern pattern = Pattern.compile("(\\d+)cm");
         Matcher matcher = pattern.matcher(height);
@@ -129,6 +134,12 @@ public class Scraper {
         }
         playerCard.accelerateMap = accelerateMap;
 
+        String topVotedChem = doc.select("div.chem-style-top-voted-desk").first().text();
+        topVotedChem = topVotedChem.split(":")[0].toLowerCase();
+        playerCard.chemistry = topVotedChem;
+        playerCard.setLikes(Long.parseLong(doc.select("#votes_up").first().text()));
+        playerCard.setDislikes(Long.parseLong(doc.select("#votes_down").first().text()));
+        playerCard.setPrimaryPosition(currPosition);
         return playerCard;
     }
 
